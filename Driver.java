@@ -9,46 +9,55 @@ public class Driver {
         return test;
     }
 
+    public static ArrayList<Comparable> ascendingArrayMaker (int size) {
+        ArrayList<Comparable> test = new ArrayList<Comparable>();
+        for (int i = 0; i < size; i++) {
+            test.add(i);
+        }
+        return test;
+    }
+
+    public static ArrayList<Comparable> descendingArrayMaker (int size) {
+        ArrayList<Comparable> test = new ArrayList<Comparable>();
+        for (int i = 0; i < size; i++) {
+            test.add(size - i);
+        }
+        return test;
+    }
+
     public static void main(String[] args) {
         // test each kind of sort function on an arraylist of test numbers
         ArrayList<Comparable> test = new ArrayList<Comparable>();
-        ArrayList<Comparable> best = new ArrayList<Comparable>();
-        ArrayList<Comparable> worst = new ArrayList<Comparable>();
+        System.out.println("DATA FOR BUBBLESORT");
+        String outTableBubbleSortSwaps = "Size\tBest\tAverage\tWorst\n";
+        for (int x = 0; x < 10; x++) {
+            int[] swapBenchBest = Sorts.bubbleSortBenchmark(ascendingArrayMaker(x * 100));
+            int[] swapBenchAverage = Sorts.bubbleSortBenchmark(arrayMaker(x * 100));
+            int[] swapBenchWorst = Sorts.bubbleSortBenchmark(descendingArrayMaker(x * 100));
+            outTableBubbleSortSwaps += x * 100 + "\t" + swapBenchBest[2] + "\t" + swapBenchAverage[2] + "\t" + swapBenchWorst[2] + "\n";
+        }
+        System.out.println(outTableBubbleSortSwaps);
 
-        // test bubble sort
-        System.out.println("Bubble Sort");
-        test = arrayMaker(10);
-        System.out.println("Random Case:");
-        System.out.println("Before: " + test);
-        test = Sorts.bubbleSort(test);
-        System.out.println("After: " + test);
-        test.clear();
+        System.out.println("DATA FOR INSERTIONSORT");
+        String outTableInsertionSortSwaps = "Size\tBest\tAverage\tWorst\n";
+        for (int x = 0; x < 10; x++) {
+            int[] swapBench2Best = Sorts.insertionSortBenchmark(ascendingArrayMaker(x * 100));
+            int[] swapBench2Average = Sorts.insertionSortBenchmark(arrayMaker(x * 100));
+            int[] swapBench2Worst = Sorts.insertionSortBenchmark(descendingArrayMaker(x * 100));
+            outTableInsertionSortSwaps += x * 100 + "\t" + swapBench2Best[2] + "\t" + swapBench2Average[2] + "\t" + swapBench2Worst[2] + "\n";
+        }
 
-        // best case bubble sort
-        System.out.println("Best Case:");
-        best.add(1);
-        best.add(3);
-        best.add(5);
-        best.add(7);
-        best.add(12);
-        System.out.println("Before: " + best);
-        best = Sorts.bubbleSort(best);
-        System.out.println("After: " + best);
-        best.clear();
+        System.out.println(outTableInsertionSortSwaps);
 
-        // worst case bubble sort
-        System.out.println("Worst Case:");
-        worst.add(3);
-        worst.add(12);
-        worst.add(7);
-        worst.add(5);
-        worst.add(1);
-        System.out.println("Before: " + worst);
-        worst = Sorts.bubbleSort(worst);
-        System.out.println("After: " + worst);
-        worst.clear();
+        System.out.println("DATA FOR SELECTIONSORT");
+        String outTableSelectionSortSwaps = "Size\tBest\tAverage\tWorst\n";
+        for (int x = 0; x < 10; x++) {
+            int[] swapBench3Best = Sorts.selectionSortBenchmark(ascendingArrayMaker(x * 100));
+            int[] swapBench3Average = Sorts.selectionSortBenchmark(arrayMaker(x * 100));
+            int[] swapBench3Worst = Sorts.selectionSortBenchmark(descendingArrayMaker(x * 100));
+            outTableSelectionSortSwaps += x * 100 + "\t" + swapBench3Best[2] + "\t" + swapBench3Average[2] + "\t" + swapBench3Worst[2] + "\n";
+        }
 
-        
+        System.out.println(outTableSelectionSortSwaps);
     }
 }
-
