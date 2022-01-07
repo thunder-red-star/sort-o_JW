@@ -48,71 +48,7 @@ public class Driver {
         System.out.println("After: " + worst);
         worst.clear();
 
-        // test selection sort
-        System.out.println("\nSelection Sort");
-        test = arrayMaker(10);
-        System.out.println("Random Case: ");
-        System.out.println("Before: " + test);
-        test = Sorts.selectionSort(test);
-        System.out.println("After: " + test);
-        test.clear();
-
-        // best case selection sort
-        System.out.println("Best Case:");
-        best.add(1);
-        best.add(3);
-        best.add(5);
-        best.add(7);
-        best.add(12);
-        System.out.println("Before: " + best);
-        best = Sorts.selectionSort(best);
-        System.out.println("After: " + best);
-        best.clear();
-
-        // worst case selection sort
-        System.out.println("Worst Case:");
-        worst.add(12);
-        worst.add(7);
-        worst.add(5);
-        worst.add(3);
-        worst.add(1);
-        System.out.println("Before: " + worst);
-        worst = Sorts.selectionSort(worst);
-        System.out.println("After: " + worst);
-        worst.clear();
-
-        // test insertion sort
-        System.out.println("\nInsertion Sort");
-        test = arrayMaker(10);
-        System.out.println("Random Case: ");
-        System.out.println("Before: " + test);
-        test = Sorts.insertionSort(test);
-        System.out.println("After: " + test);
-        test.clear();
-
-        // best case insertion sort
-        System.out.println("Best Case:");
-        best.add(1);
-        best.add(3);
-        best.add(5);
-        best.add(7);
-        best.add(12);
-        System.out.println("Before: " + best);
-        best = Sorts.insertionSort(best);
-        System.out.println("After: " + best);
-        best.clear();
-
-        // worst case insertion sort
-        System.out.println("Worst Case:");
-        worst.add(12);
-        worst.add(7);
-        worst.add(5);
-        worst.add(3);
-        worst.add(1);
-        System.out.println("Before: " + worst);
-        worst = Sorts.insertionSort(worst);
-        System.out.println("After: " + worst);
-        worst.clear();
+        
     }
 }
 
