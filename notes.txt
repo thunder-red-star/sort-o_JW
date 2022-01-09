@@ -1,0 +1,42 @@
+/*
+JW (Jefford Shau, William Vongphanith)
+APCS pd 6
+L04 -- Never Fear, Big O is Here!
+2022-01-08
+time spent: 2.5 hrs
+*/
+
+ /*
+DISCO
+  0. For each of our sorts, instead of returning the ordered list, we returned the number of passes, compares, and swaps.
+  1. For each of our sorts, we ran three tests: the best case, the average (random) case, and the worst case.
+QCC:
+  0. Are there more efficient sorts than Insertion sort and Selection sort?
+BUB-QA:
+* q0: If a pass requires no swaps, what do you know?
+* a0: The entire list is sorted.
+* q1: After pass p, what do you know?
+* a1: After pass p, the first p - 1 elements are sorted.
+* q2: How many passes are necessary to completely sort?
+* a2: If n is the number of elements in the list, n - 1 passes are necessary to sort the list.
+SEL-QA:
+* q0: How many passes to sort n elements?
+* a0: n - 1 passes are needed to sort n elements.
+* q1: What do you know after pass p?
+* a1: After pass p, the first p elements are sorted.
+* q2: How do you know if sorted?
+* a2: We know the list is sorted after n - 1 passes.
+* q3: What does a pass boil down to?
+* a3: A pass boils down to one swap.
+INS-QA:
+* q0: How many passes to sort n elements?
+* a0: n - 1 passes are necessary to sort n elements.
+* q1: What do you know after pass p?
+* a1: After pass p, the first p + 1 elements are sorted.
+* q2: How will you know when sorted?
+* a2: If n is the number of elements in the list, we will know the list is sorted after n - 1 passes.
+* q3: What constitutes a pass?
+* a3: A pass a traversal of the first p + 1 elements. A pass is also when an element in the unsorted region is placed in ascending order in the sorted region.
+* q4: What must you track?
+* a4: We must track the number of swaps and the element that was swapped for each pass.
+*/

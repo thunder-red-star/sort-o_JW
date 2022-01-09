@@ -38,17 +38,6 @@ public class Driver {
         }
         System.out.println(outTableBubbleSortSwaps);
 
-        System.out.println("DATA FOR INSERTIONSORT");
-        String outTableInsertionSortSwaps = "Size\tBest\tAverage\tWorst\n";
-        for (int x = 0; x < 10; x++) {
-            int[] swapBench2Best = Sorts.insertionSortBenchmark(ascendingArrayMaker(x * 100));
-            int[] swapBench2Average = Sorts.insertionSortBenchmark(arrayMaker(x * 100));
-            int[] swapBench2Worst = Sorts.insertionSortBenchmark(descendingArrayMaker(x * 100));
-            outTableInsertionSortSwaps += x * 100 + "\t" + swapBench2Best[2] + "\t" + swapBench2Average[2] + "\t" + swapBench2Worst[2] + "\n";
-        }
-
-        System.out.println(outTableInsertionSortSwaps);
-
         System.out.println("DATA FOR SELECTIONSORT");
         String outTableSelectionSortSwaps = "Size\tBest\tAverage\tWorst\n";
         for (int x = 0; x < 10; x++) {
@@ -59,5 +48,16 @@ public class Driver {
         }
 
         System.out.println(outTableSelectionSortSwaps);
+
+        System.out.println("DATA FOR INSERTIONSORT");
+        String outTableInsertionSortSwaps = "Size\tBest\tAverage\tWorst\n";
+        for (int x = 0; x < 10; x++) {
+            int[] swapBench2Best = Sorts.insertionSortBenchmark(ascendingArrayMaker(x * 100));
+            int[] swapBench2Average = Sorts.insertionSortBenchmark(arrayMaker(x * 100));
+            int[] swapBench2Worst = Sorts.insertionSortBenchmark(descendingArrayMaker(x * 100));
+            outTableInsertionSortSwaps += x * 100 + "\t" + swapBench2Best[2] + "\t" + swapBench2Average[2] + "\t" + swapBench2Worst[2] + "\n";
+        }
+
+        System.out.println(outTableInsertionSortSwaps);
     }
 }
