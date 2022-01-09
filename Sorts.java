@@ -109,9 +109,9 @@ public class Sorts {
         int passes = 0;
         int swaps = 0;
         int compares = 0;
-        for( int i = 0; i < data.size(); i++ ) {
+        for( int i = 1; i < data.size(); i++ ) {
             passes += 1;
-            for( int j = 0; j < data.size()-1-i; j++ ) {
+            for( int j = 0; j < data.size()-i; j++ ) {
                 compares += 1;
                 if( data.get(j).compareTo(data.get(j+1)) > 0 ) {
                     Comparable temp = data.get(j);
