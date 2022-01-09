@@ -3,11 +3,11 @@ Roster: Jefford Shau, William Vongphanith
 SOTW: "Stay" by The Kid KAROI, Justin Bieber
 
 ## Bubble Sort
-Best case scenario:
+** Best case scenario: **
 - The list is already sorted.
 - Explanation: When the list is already sorted,
 - Ex: 1, 3, 5, 7, 12  
-Worst case scenario:
+** Worst case scenario: **
 - The list is in descending order
 - Explanation:
 - Ex: 12, 7, 5, 3, 1
