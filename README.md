@@ -6,7 +6,9 @@ SOTW: "Stay" by The Kid KAROI, Justin Bieber
 **Best case scenario:**
 - The list is already sorted.
 - Explanation: When the list is already sorted,
-- Ex: 1, 3, 5, 7, 12 \
+- Ex: 1, 3, 5, 7, 12
+
+
 **Worst case scenario:**
 - The list is in descending order
 - Explanation:
