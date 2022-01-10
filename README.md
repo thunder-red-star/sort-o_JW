@@ -1,5 +1,5 @@
 # sort-o_JW
-Roster: Jefford Shau, William Vongphanith
+Roster: Jefford Shau, William Vongphanith  
 SOTW: "Stay" by The Kid KAROI, Justin Bieber
 
 ## Bubble Sort
