@@ -109,16 +109,22 @@ public class Sorts {
         int passes = 0;
         int swaps = 0;
         int compares = 0;
+        int swapsPerPass = 0;
         for( int i = 1; i < data.size(); i++ ) {
             passes += 1;
             for( int j = 0; j < data.size()-i; j++ ) {
+                swapsPerPass = 0;
                 compares += 1;
                 if( data.get(j).compareTo(data.get(j+1)) > 0 ) {
                     Comparable temp = data.get(j);
                     data.set(j, data.get(j+1));
                     data.set(j+1, temp);
+                    swapsPerPass += 1;
                     swaps += 1;
                 }
+            }
+            if (swapsPerPass == 0) {
+              break;
             }
         }
         int[] benchmarks = {passes, compares, swaps};
